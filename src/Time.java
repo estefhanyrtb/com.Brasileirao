@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -20,6 +21,16 @@ public class Time {
     private int derrotas;
 
     public Time() {
+        jogadores = new ArrayList<>();
+
+    }
+
+    public void adicionarJogador(Jogador jogador) {
+        if ((jogadores.size() < 11) && (!jogadores.contains(jogador))) {
+            jogadores.add(jogador);
+        } else {
+            System.out.println("Jogador não pode ser adicionado!");
+        }
     }
 
     public Time(String nome, String tecnico, List<Jogador> jogadores, int vitorias, int empates, int derrotas) {
