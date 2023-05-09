@@ -14,7 +14,7 @@ import java.util.List;
 public class Time {
 
     private String nome;
-    private String tecnico;
+    private Tecnico tecnico;
     private List<Jogador> jogadores;
     private int vitorias;
     private int empates;
@@ -25,6 +25,10 @@ public class Time {
 
     }
 
+    Time(String grêmio, Tecnico tecnicoDoGremio, int i, int i0, int i1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public void adicionarJogador(Jogador jogador) {
         if ((jogadores.size() < 11) && (!jogadores.contains(jogador))) {
             jogadores.add(jogador);
@@ -33,7 +37,7 @@ public class Time {
         }
     }
 
-    public Time(String nome, String tecnico, List<Jogador> jogadores, int vitorias, int empates, int derrotas) {
+    public Time(String nome, Tecnico tecnico, List<Jogador> jogadores, int vitorias, int empates, int derrotas) {
         this.nome = nome;
         this.tecnico = tecnico;
         this.jogadores = jogadores;
@@ -50,11 +54,11 @@ public class Time {
         this.nome = nome;
     }
 
-    public String getTecnico() {
+    public Tecnico getTecnico() {
         return tecnico;
     }
 
-    public void setTecnico(String tecnico) {
+    public void setTecnico(Tecnico tecnico) {
         this.tecnico = tecnico;
     }
 
