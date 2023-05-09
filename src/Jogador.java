@@ -11,10 +11,7 @@ import java.util.logging.Logger;
  *
  * @author Escola
  */
-public class Jogador {
-    public enum Posicao{
-        GOLEIRO, ZAGUEIRO, LATERAL, VOLANTE, MEIA, ATACANTE
-    }
+public class Jogador { 
     private String nome;
     private int numeroCamisa;
     private Posicao posicao;
